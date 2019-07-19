@@ -1,0 +1,82 @@
+<template>
+    <lightning-card>
+        <div >
+            <div class="slds-text-align_center slds-text-heading_large " style="color:blue">
+                Big Object Records - Custom Lightning Web Component:
+            </div>
+            <div class="slds-m-around_medium" >
+                <div if:true={bigObjects}>
+                    <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid">
+                        <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                            <div class="slds-truncate" title="Opportunity Name">Account</div>
+                            </th>
+                            <th class="" scope="col">
+                            <div class="slds-truncate" title="Account Name">Date of Play</div>
+                            </th>
+                            <th class="" scope="col">
+                            <div class="slds-truncate" title="Close Date">In-Game Purchase</div>
+                            </th>
+                            <th class="" scope="col">
+                            <div class="slds-truncate" title="Stage">Level Achieved</div>
+                            </th>
+                            <th class="" scope="col">
+                            <div class="slds-truncate" title="Confidence">Lives Used This Game</div>
+                            </th>
+                            <th class="" scope="col">
+                            <div class="slds-truncate" title="Amount">Platform</div>
+                            </th>
+                            <th class="" scope="col">
+                            <div class="slds-truncate" title="Contact">Play Duration</div>
+                            </th>
+                            <th class="" scope="col">
+                            <div class="slds-truncate" title="Contact">	
+                                    Score This Game</div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={bigObjects} for:item="bo" for:index="index">
+                                <tr class="slds-hint-parent" key={{bo.uniqId}}>
+                                    <td data-label="Account Name">
+                                        <div class="slds-truncate" title="Cloudhub">{bo.Game_User_Account__c}</div>
+                                    </td>
+                                    <td data-label="Account Name">
+                                        <div class="slds-truncate" title="Cloudhub">{bo.Play_Date__c}</div>
+                                    </td>
+                                    <td data-label="Account Name">
+                                        <div class="slds-truncate" title="Cloudhub">{bo.In_Game_Purchase__c}</div>
+                                    </td>
+                                    <td data-label="Account Name">
+                                        <div class="slds-truncate" title="Cloudhub">{bo.Level_Achieved__c}</div>
+                                    </td>
+                                    <td data-label="Account Name">
+                                        <div class="slds-truncate" title="Cloudhub">{bo.Lives_This_Game__c}</div>
+                                    </td>
+                                    <td data-label="Account Name">
+                                        <div class="slds-truncate" title="Cloudhub">{bo.Game_Platform__c}</div>
+                                    </td>
+                                    <td data-label="Account Name">
+                                        <div class="slds-truncate" title="Cloudhub">{bo.Play_Duration__c}</div>
+                                    </td>
+                                    <td data-label="Account Name">
+                                        <div class="slds-truncate" title="Cloudhub">{bo.Score_This_Game__c}</div>
+                                    </td>
+                                    
+                                </tr>
+
+                            </template>
+
+                            
+                        </tbody>
+                        </table>
+                    </div>
+                <div if:true={error}>
+                    {error}
+                </div>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>

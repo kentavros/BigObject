@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+        <div>
+            <div class="slds-text-align_center slds-text-heading_large " style="color:blue">
+                Get big object records - async:
+            </div>
+            <div class="slds-text-align_center slds-p-around_medium">
+                <lightning-button 
+                    class="slds-m-left_x-small"
+                    variant="success" 
+                    label="Get records asynchronously" 
+                    title="Success" 
+                    onclick={handleClick}>
+                </lightning-button>
+            </div>
+        </div>
+
+        <div if:true={countRecords} class="slds-text-color_success slds-text-align_center slds-text-heading_large">
+            Big Object Record Count: <span style="color: blue">{countRecords}</span>
+        </div>
+        <div if:true={isSpinner} class="">
+            <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+        </div>
+
+        <div if:true={error} class="slds-text-color_error slds-text-align_center slds-text-heading_large">
+            {error.body.message}
+        </div>
+    </lightning-card>
+</template>

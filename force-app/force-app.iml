@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/main/default" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/default" isTestSource="true" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lib/built-in-stubs.jar!/" />
+        </CLASSES>
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../lib/built-in-stubs.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+  <component name="SFModuleSetting">
+    <option name="type" value="DX" />
+  </component>
+</module>
