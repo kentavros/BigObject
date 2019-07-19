@@ -30,4 +30,18 @@ export default class AsyncBObject extends LightningElement {
     toggleSpinner() {
         this.isSpinner = !this.isSpinner;
     }
+
+
+    /**
+     * Object for post:
+     *
+     {
+  "query": "SELECT Game_User_Account__c FROM Customer_Interaction__b",
+  "operation": "insert",
+  "targetObject": "ObjectTestTrigger__c",
+  "targetFieldMap" : {
+    "Game_User_Account__c": "Text_field__c"
+  }
+}
+     */
 }
